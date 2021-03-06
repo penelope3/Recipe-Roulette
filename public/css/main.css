@@ -1,0 +1,56 @@
+/* Custom CSS for Site */
+
+body{
+    background-image: linear-gradient(90deg, #f5e1cf 25%, #e8bebc 25%, #e8bebc 50%, #f5e1cf 50%, #f5e1cf 75%, #e8bebc 75%, #e8bebc 100%) !important;
+    background-size: 110.00px 110.00px !important;
+    background: #f5e1cf;
+    color: #48362f;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+nav {
+    font-size: 20px;
+    background: #ffa7a7 !important;
+    margin-bottom: 0px;
+    margin-left: 17%;
+    margin-right: 17%;
+    padding-bottom: 20px;
+    border-radius: 0px 0px 5px 5px;
+}
+footer{
+    color: #512020;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom: 75px;
+    margin-left: 17%;
+    margin-right: 17%;
+    padding-right: 25px;
+}
+.top-bar{
+    font-size: 20px;
+    background: #f57d7d !important;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 17%;
+    margin-right: 17%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    border-radius: 10px 10px 0px 0px;
+}
+.float-container {
+    margin-left: 17%;
+    margin-right: 17%;
+}
+
+.main{
+    background: #fed9c6;
+    height: 70%;
+    width: 100%;
+    float: left;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
