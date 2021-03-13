@@ -30,6 +30,20 @@
                     <h2><a href="{{ route('register') }}" class="p-3">Register</a></h2>
                 </li>
             </ul>
+
+            <ul class="flex items-center">
+                @auth
+                    <li>
+                        <a href="" class="p-3">{{ auth()->user()->username }}</a>
+                    </li>
+                    <li>
+                        <form action="{{ route('logout') }}" method="post" class="p-3 inline">
+                            @csrf
+                            <button type="submit">Logout</button>
+                        </form>
+                    </li>
+                @endauth
+            </ul>
         </nav>
         @yield('content')
     </body>
