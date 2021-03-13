@@ -26,7 +26,7 @@
                     <input type="text" name="email" id="email" placeholder="Your email address" class="bg-gray-100 border-2 p-4 rounded-lg @error('name') border-red-500 @enderror" value="{{ old('email') }}">
                 </div>
 
-                @error('name')
+                @error('email')
                     <div class="text-red-500 mt-2 text-sm">
                         {{ $message }}
                     </div>
@@ -38,7 +38,7 @@
                     <input type="password" name="password" id="password" placeholder="Choose a password" class="bg-gray-100 border-2 p-4 rounded-lg @error('name') border-red-500 @enderror" value="">
                 </div>
 
-                @error('name')
+                @error('password')
                     <div class="text-red-500 mt-2 text-sm">
                         {{ $message }}
                     </div>
@@ -50,7 +50,7 @@
                     <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Repeat your password" class="bg-gray-100 border-2 p-4 rounded-lg @error('name') border-red-500 @enderror" value="">
                 </div>
 
-                @error('name')
+                @error('password_confirmation')
                     <div class="text-red-500 mt-2 text-sm">
                         {{ $message }}
                     </div>

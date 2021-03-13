@@ -29,12 +29,15 @@
                 <li>
                     <h2><a href="{{ route('register') }}" class="p-3">Register</a></h2>
                 </li>
+                <li>
+                    <h2><a href="{{ route('login') }}" class="p-3">Login</a></h2>
+                </li>
             </ul>
 
             <ul class="flex items-center">
                 @auth
                     <li>
-                        <a href="" class="p-3">{{ auth()->user()->username }}</a>
+                        <a href="" class="p-3">{{ auth()->user()->name }}</a>
                     </li>
                     <li>
                         <form action="{{ route('logout') }}" method="post" class="p-3 inline">
