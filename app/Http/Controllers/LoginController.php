@@ -14,8 +14,10 @@ class LoginController extends Controller
     }
 
     public function store(Request $request){
-        auth()->attempt($request->only('email', 'password'), $request->remember);
-
-        return redirect()->route('dashboard');
+        if(!auth()->attempt($request->only('email', 'password'))){
+            return redirect()->back()->with('status', 'Invalid Login Attempt');
+        }
+    return redirect()->route('dashboard');
+        
     }
 }

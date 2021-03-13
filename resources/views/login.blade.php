@@ -3,14 +3,19 @@
 @section('content')
     <div class="float-container">
         <div class="main">
-            Login to your account here!
+        Login to your account here! </br>
+        @if(session('status'))
+        <div class="bg-red-500 p-4 w-60 rounded-lg mb-6 text-white text-center">
+            {{ session('status') }}
+        </div>
+        @endif
 
             <form action="{{ route('login') }}" method="post">
                 @csrf
 
                 <div class="mb-4">
                     <label for="email" class="sr-only">Email</label>
-                    <input type="text" name="email" id="email" placeholder="Your username" class="bg-gray-100 border-2 p-4 rounded-lg @error('email') border-red-500 @enderror" value="{{ old('email') }}">
+                    <input type="text" name="email" id="email" placeholder="Your email" class="bg-gray-100 border-2 p-4 rounded-lg @error('email') border-red-500 @enderror" value="{{ old('email') }}">
                 </div>
 
                 @error('email')

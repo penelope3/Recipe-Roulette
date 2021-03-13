@@ -26,18 +26,12 @@
                 <li>
                     <h2><a href="" class="p-3">Post</a></h2>
                 </li>
-                <li>
-                    <h2><a href="{{ route('register') }}" class="p-3">Register</a></h2>
-                </li>
-                <li>
-                    <h2><a href="{{ route('login') }}" class="p-3">Login</a></h2>
-                </li>
             </ul>
-
+            
             <ul class="flex items-center">
                 @auth
                     <li>
-                        <a href="" class="p-3">{{ auth()->user()->name }}</a>
+                        <a href="" class="p-3">Logged in!</a>
                     </li>
                     <li>
                         <form action="{{ route('logout') }}" method="post" class="p-3 inline">
@@ -46,6 +40,15 @@
                         </form>
                     </li>
                 @endauth
+
+                @guest
+                <li>
+                    <h2><a href="{{ route('register') }}" class="p-3">Register</a></h2>
+                </li>
+                <li>
+                    <h2><a href="{{ route('login') }}" class="p-3">Login</a></h2>
+                </li>
+                @endguest
             </ul>
         </nav>
         @yield('content')
