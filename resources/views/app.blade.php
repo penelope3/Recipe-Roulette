@@ -18,7 +18,7 @@
             @endauth
     </nav>
     <body class="bg-gray-200">
-        <nav class="p-6 bg-white flex jusifty-between mb-6">
+        <nav class="p-6 bg-white flex justify-between mb-6">
             <ul class="flex items-center">
                 <li>
                     <h2><a href="{{ route('home') }}" class="p-3">Home</a></h2>
