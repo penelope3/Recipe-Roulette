@@ -12,7 +12,10 @@
     </head>
 
     <nav class="top-bar">
-        <h2 class="light">Welcome</h2>
+        Welcome
+            @auth
+                <a href="" class="p-3">{{ auth()->user()->name }}</a>
+            @endauth
     </nav>
     <body class="bg-gray-200">
         <nav class="p-6 bg-white flex jusifty-between mb-6">
@@ -27,12 +30,9 @@
                     <h2><a href="" class="p-3">Post</a></h2>
                 </li>
             </ul>
-            
+
             <ul class="flex items-center">
                 @auth
-                    <li>
-                        <a href="" class="p-3">Logged in!</a>
-                    </li>
                     <li>
                         <form action="{{ route('logout') }}" method="post" class="p-3 inline">
                             @csrf
