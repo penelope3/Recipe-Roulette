@@ -3,21 +3,18 @@
 body{
     background-image: linear-gradient(#C97064, #F6D188) !important;
     background-size: cover !important;
+    background-repeat: no-repeat;
     height: 100%;
     background: #f5e1cf;
     color: #48362f;
     font-size: 18px;
     line-height: 30px;
 }
-
 nav {
-    overflow: auto;
-    font-size: 20px;
     background: #ECBD93 !important;
-    width: 50%;
+    margin:0px auto;
+    width:50%;
     min-width: 500px;
-    margin-left: 25%;
-    margin-right: 17%;
     padding-bottom: 20px;
     border-radius: 0px 0px 5px 5px;
 }
@@ -35,23 +32,23 @@ footer{
 .top-bar{
     font-size: 20px;
     background: #A8A37A !important;
+    margin:0px auto;
+    width:50%;
+    min-width: 500px;
+    padding-bottom: 20px;
     margin-top: 60px;
     margin-bottom: 0px;
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 17%;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 50px;
     border-radius: 10px 10px 0px 0px;
 }
 .float-container {
-    margin-left: 17%;
-    margin-right: 17%;
-    width: 50%;
-    margin-left: 25%;
+    margin:0px auto;
+    width:50%;
+    min-width: 500px;
+    padding-bottom: 20px;
 }
-
 .main{
     background: #EED1B5;
     height: 70%;
@@ -60,6 +57,6 @@ footer{
     float: left;
     padding: 25px;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     overflow: auto;
 }
