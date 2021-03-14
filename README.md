@@ -5,4 +5,4 @@ This product is created by Soup Group, consisting of Cassandra Harkins and Pooja
 We are currently in stage: Early Product Design
 
 Current design:
-![prototype home page](https://github.com/penelope3/reciperoulette/current_img/prototype-home.png?raw=true)
+![prototype home page](https://github.com/penelope3/Recipe-Roulette/blob/master/current_img/prototype-home.PNG)
