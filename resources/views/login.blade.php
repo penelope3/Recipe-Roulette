@@ -4,6 +4,7 @@
     <div class="float-container">
         <div class="main">
         Login to your account here! </br>
+        {{-- If login results in error, they will be shown here --}}
         @if(session('status'))
         <div class="bg-red-500 p-4 w-60 rounded-lg mb-6 text-white text-center">
             {{ session('status') }}

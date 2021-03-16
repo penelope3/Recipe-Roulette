@@ -4,7 +4,7 @@
     <div class="float-container">
         <div class="main">
             <span>Register your Recipe Roulette Account here!</span>
-
+            {{-- This form will take in Name, Email, and Password to register a user --}}
             <form action="{{ route('register') }}" method="post" class="m-2">
                 @csrf
 
