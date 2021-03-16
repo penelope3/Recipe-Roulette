@@ -8,7 +8,6 @@ body{
     font-size: 18px;
     line-height: 30px;
 }
-
 nav {
     font-size: 20px;
     background: #ffa7a7 !important;
@@ -18,7 +17,6 @@ nav {
     padding-bottom: 20px;
     border-radius: 0px 0px 5px 5px;
 }
-
 footer{
     color: #512020;
     font-size: 14px;
@@ -45,7 +43,6 @@ footer{
     margin-left: 17%;
     margin-right: 17%;
 }
-
 .main{
     background: #fed9c6;
     height: 70%;

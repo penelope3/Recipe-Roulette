@@ -11,6 +11,8 @@ class RegisterController extends Controller
         return view('register');
     }
 
+    //this function will create and store a new user in the db
+    //on error it will redirect and throw an alert message
     public function store(Request $request){
         $request->validate([
             'name' => 'required|max:255',

@@ -1,3 +1,4 @@
+{{-- This file contains the html that is on every page --}}
 <html>
     <head>
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
