@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+//default user model given by Laravel
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;

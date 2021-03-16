@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+//this class is for logging in the user
 class LoginController extends Controller
 {
     public function __construct(){
