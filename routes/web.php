@@ -28,4 +28,4 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware(['guest']);
 Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
-Route::get('/post', [PostController::class, 'index'])->name('post');
+Route::get('/post', [PostController::class, 'index'])->name('post')->middleware(['auth']);

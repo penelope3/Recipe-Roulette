@@ -27,9 +27,11 @@
                 <li>
                     <h2><a href="{{ route('collections') }}" class="p-3">Collections</a></h2>
                 </li>
+                @auth
                 <li>
                     <h2><a href="{{ route('post') }}" class="p-3">Post</a></h2>
                 </li>
+                @endauth
             </ul>
 
             <ul class="flex items-center">
