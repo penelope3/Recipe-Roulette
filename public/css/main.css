@@ -60,3 +60,8 @@ footer{
     margin-bottom: 20px;
     overflow: auto;
 }
+#random-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
