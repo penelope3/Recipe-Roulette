@@ -1,4 +1,4 @@
-{{-- In Progress --}}
+{{-- For Editing Dietary Preferences --}}
 @extends ('app')
 
 @section('content')
@@ -15,10 +15,10 @@
                     </form>
                     <div class="chips" id="restrictionChips">
                       <div class="chip">
-                          Fish <span class="closebtn">&times;</span>
+                          Fish <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
                       </div>
                       <div class="chip">
-                          Peanuts <span class="closebtn">&times;</span>
+                          Peanuts <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
                       </div>
                     </div>
                     <input type="submit" value="Submit" id="submitRestrictions"/>

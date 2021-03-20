@@ -1,4 +1,4 @@
-{{-- In Progress --}}
+{{-- For Posting a New Recipe --}}
 @extends ('app')
 
 @section('content')
@@ -16,7 +16,7 @@
                     <br>
                     <div class="chips" id ="ingredientChips">
                       <div class="chip">
-                          Ingredient 1<span class="closebtn">&times;</span>
+                          Ingredient 1<span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
                       </div>
                     </div>
                     <br>
@@ -25,7 +25,7 @@
                     <br>
                     <div class="chips" id ="instructionChips">
                       <div class="chip">
-                          Instruction 1<span class="closebtn">&times;</span>
+                          Instruction 1<span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
                       </div>
                     </div>
                     <br>

@@ -20,6 +20,7 @@ $(document).ready(function(){
 
     // Add chip to restrictions
     $("#submitRestriction").click(function(){
+      event.preventDefault();
       var restriction = $.trim( $('restriction').val() );
       $("#restrictionChips").append(" <div class='chip' id=" + restriction + ">" + restriction + "<span class='closebtn'>&times;</span> </div>");
       restrictionList.push(restriction);
@@ -27,7 +28,7 @@ $(document).ready(function(){
 
     // Add chip to restrictions
     $("#submitRestrictions").click(function(){
-
+      event.preventDefault();
     });
 
 
