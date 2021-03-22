@@ -1,3 +1,4 @@
+{{-- For showing a single Recipe --}}
 @extends ('app')
 
 @section('content')

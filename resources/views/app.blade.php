@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Recipe Roulette</title>
-
+        <script src="{{ asset('js/functionality.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap">
@@ -47,15 +47,19 @@
                 <li>
                     <h2><a href="{{ route('collections') }}" class="p-3">Collections</a></h2>
                 </li>
-                @auth
-                <li>
-                    <h2><a href="{{ route('post') }}" class="p-3">Post</a></h2>
-                </li>
-                @endauth
             </ul>
 
             <ul class="flex items-center">
                 @auth
+                    <li>
+                        <h2><a href="{{ route('post') }}" class="p-3">Post</a></h2>
+                    </li>
+                    <li>
+                        <h2><a href="{{ route('collections') }}" class="p-3">Collections</a></h2>
+                    </li>
+                    <li>
+                        <h2><a href="{{ route('account') }}" class="p-3">Account</a></h2>
+                    </li>
                     <li>
                         <form action="{{ route('logout') }}" method="post" class="p-3 inline">
                             @csrf

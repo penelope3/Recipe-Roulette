@@ -1,5 +1,8 @@
 /* Custom CSS for Site */
 
+/*****************
+/* App.blade formatting
+******************/
 body{
     background-image: linear-gradient(#C97064, #F6D188) !important;
     background-size: cover !important;
@@ -14,7 +17,7 @@ nav {
     background: #ECBD93 !important;
     margin:0px auto;
     width:50%;
-    min-width: 500px;
+    min-width: 550px;
     padding-bottom: 20px;
     border-radius: 0px 0px 5px 5px;
 }
@@ -34,7 +37,7 @@ footer{
     background: #A8A37A !important;
     margin:0px auto;
     width:50%;
-    min-width: 500px;
+    min-width: 550px;
     padding-bottom: 20px;
     margin-top: 60px;
     margin-bottom: 0px;
@@ -46,22 +49,78 @@ footer{
 .float-container {
     margin:0px auto;
     width:50%;
-    min-width: 500px;
+    min-width: 550px;
     padding-bottom: 20px;
 }
 .main{
     background: #EED1B5;
     height: 70%;
     width: 100%;
-    min-width: 500px;
+    min-width: 550px;
     float: left;
     padding: 25px;
     border-radius: 10px;
     margin-bottom: 20px;
     overflow: auto;
 }
+
+
+/*****************
+/* Home Page formatting
+******************/
 #random-btn{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+/*****************
+/* Post Page formatting
+******************/
+#ImageSubmit {
+  font-size: 10pt;
+}
+
+
+/*****************
+/* Image List formatting
+******************/
+.column {
+  float:left;
+  width: 50%;
+}
+.listItems > div a img {
+  width: 90%;
+}
+
+
+/*****************
+* Chip formatting
+******************/
+.listItems li {
+    display: inline;
+    float: left;
+    width: 25%;
+    list-style-type: none;
+}
+.chip {
+  display: inline-block;
+  padding: 0 15px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+}
+.closebtn {
+  padding-left: 10px;
+  color: #888;
+  font-weight: bold;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+.closebtn:hover {
+  color: #000;
 }
