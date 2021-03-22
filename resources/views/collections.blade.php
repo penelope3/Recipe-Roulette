@@ -28,6 +28,7 @@
                     </a>
                 </div>
             </div>
+>>>>>>> master
         </div>
     </div>
 @endsection

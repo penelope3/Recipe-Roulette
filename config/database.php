@@ -39,7 +39,7 @@ return [
             'driver' => 'mongodb',
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', 27017),
-            'database' => env('DB_DATABASE', 'Recipe_Routlette'),
+            'database' => env('DB_DATABASE', 'reciperoutlette'),
             'username' => env('DB_USERNAME', 'admin'),
             'password' => env('DB_PASSWORD', 'test123'),
             'options' => [

@@ -33,6 +33,6 @@ class RegisterController extends Controller
                 "Please try again or try submitting a ticket on the <a href=" . route('dashboard') . " style='color: blue;'>support page!</a>"]);
         }
 
-        return redirect()->route('dashboard');
+        return redirect()->route('collections');
     }
 }

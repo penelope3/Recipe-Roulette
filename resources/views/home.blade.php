@@ -3,7 +3,10 @@
 @section('content')
     <div class="float-container">
         <div class="main">
-            <p>Candy gummies dessert brownie powder oat cake caramels marshmallow. Toffee dragée candy canes gummies marshmallow macaroon. Cake lemon drops cake tootsie roll gingerbread jujubes bonbon cake. Chupa chups croissant caramels. Jelly lollipop cheesecake. Cheesecake liquorice gingerbread toffee pie. Chupa chups lollipop jelly-o jelly-o chupa chups chocolate cake. Cheesecake chupa chups ice cream halvah donut apple pie sweet roll jelly beans. Caramels bonbon jelly-o. Chocolate bar sweet roll sweet roll carrot cake tart chupa chups candy. Jelly-o tart jelly beans oat cake. Cheesecake tiramisu powder.</p>
+            {{-- Button for Random Recipe Generation (lead to /recipe) --}}
+            <a href="{{ route('recipe') }}" type="button" class="bg-green-700 hover:bg-green-600 text-white font-bold py-2 px-4 border-b-4 border-green-800 hover:border-green-500 rounded" id="random-btn"> Generate Recipe</a>
+        </br>
+        </br>
 
             <p>Carrot cake jujubes sweet roll sweet roll jujubes jelly-o sesame snaps. Pie tart dessert topping marshmallow powder sweet dragée cookie. Danish candy candy pie sesame snaps jelly-o. Cheesecake candy cake fruitcake pie cake sweet roll chocolate cake. Carrot cake pudding pie jelly beans gingerbread danish wafer. Chocolate cake dessert biscuit ice cream. Cotton candy toffee soufflé. Carrot cake cookie lollipop fruitcake. Candy canes sweet roll candy canes marzipan topping tootsie roll tootsie roll fruitcake apple pie. Cotton candy candy canes icing marzipan jelly-o. Bonbon muffin marzipan bear claw gingerbread candy gummies marshmallow gummi bears. Sweet cotton candy jelly chocolate. Cheesecake jelly beans sweet roll chocolate cotton candy.</p>
 

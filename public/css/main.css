@@ -1,5 +1,8 @@
 /* Custom CSS for Site */
 
+/*****************
+/* App.blade formatting
+******************/
 body{
     background-image: linear-gradient(#C97064, #F6D188) !important;
     background-size: cover !important;
@@ -63,6 +66,16 @@ footer{
 
 
 /*****************
+/* Home Page formatting
+******************/
+#random-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*****************
 /* Post Page formatting
 ******************/
 #ImageSubmit {
@@ -91,7 +104,6 @@ footer{
     width: 25%;
     list-style-type: none;
 }
-
 .chip {
   display: inline-block;
   padding: 0 15px;
@@ -101,7 +113,6 @@ footer{
   border-radius: 25px;
   background-color: #f1f1f1;
 }
-
 .closebtn {
   padding-left: 10px;
   color: #888;
@@ -110,7 +121,6 @@ footer{
   font-size: 20px;
   cursor: pointer;
 }
-
 .closebtn:hover {
   color: #000;
 }
