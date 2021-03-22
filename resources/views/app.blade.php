@@ -44,9 +44,6 @@
                 <li>
                     <h2><a href="{{ route('home') }}" class="p-3">Home</a></h2>
                 </li>
-                <li>
-                    <h2><a href="{{ route('collections') }}" class="p-3">Collections</a></h2>
-                </li>
             </ul>
 
             <ul class="flex items-center">
