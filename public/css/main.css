@@ -3,6 +3,15 @@
 /*****************
 /* App.blade formatting
 ******************/
+#logo{
+    text-align: center;
+    display: flex;
+    width: 40%;
+    height: auto;
+    margin:0px auto;
+    margin-top: 50px;
+    margin-bottom: -60px;
+}
 body{
     background-image: linear-gradient(#C97064, #F6D188) !important;
     background-size: cover !important;
@@ -53,6 +62,7 @@ footer{
     padding-bottom: 20px;
 }
 .main{
+    color: #2A5547;
     background: #EED1B5;
     height: 70%;
     width: 100%;
@@ -111,7 +121,7 @@ footer{
   font-size: 12px;
   line-height: 30px;
   border-radius: 25px;
-  background-color: #f1f1f1;
+  background-color: #bfc683;
 }
 .closebtn {
   padding-left: 10px;

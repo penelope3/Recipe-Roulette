@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap">
 
     </head>
+    <div id='nav'>
+        <img src="{{ asset('images/logo.png') }}" id="logo" />
 
     <nav class="top-bar p-6 flex justify-between mb-6">
         <ul class="flex items-center">
@@ -75,9 +77,10 @@
                 @endguest
             </ul>
         </nav>
+        </div>
         @yield('content')
     </body>
     <footer>
-        © 2021 Soup Group
+        © 2021 Soup Group | Logo created at LogoMakr.com
     </footer>
 </html>
