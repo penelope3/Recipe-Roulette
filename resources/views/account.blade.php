@@ -21,7 +21,7 @@
                           Peanuts <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
                       </div>
                     </div>
-                    <input type="submit" value="Submit" id="submitRestrictions"/>
+                    <input type="submit" value="Submit" id="submitRestrictions" class="bg-green-700 hover:bg-green-600 text-white font-bold py-2 px-4 border-b-4 border-green-800 hover:border-green-500 rounded"/>
                 </form>
             </div>
         </div>
