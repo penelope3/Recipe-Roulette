@@ -32,7 +32,7 @@
                     <label for="Image">Image</label>
                     <input type="file" id="ImageSubmit" accept="image/*">
                     <br>
-                    <input type="submit" value="Submit"/>
+                    <input type="submit" value="Submit" class="bg-green-700 hover:bg-green-600 text-white font-bold py-2 px-4 border-b-4 border-green-800 hover:border-green-500 rounded"/>
                 </form>
             </div>
         </div>
