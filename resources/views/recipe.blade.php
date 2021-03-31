@@ -8,7 +8,7 @@
             </span>
         </br>
             <label for="food1">mock recipe</label>
-            <img src="{{ asset('images/recipe.png') }}" id="mock_recipe">
+            <img src="{{ asset('images/recipe.PNG') }}" id="mock_recipe">
         </div>
     </div>
 @endsection
