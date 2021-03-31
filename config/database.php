@@ -38,7 +38,7 @@ return [
         'mongodb' => [
             'driver' => 'mongodb',
             'dsn' => getenv('MONGODB_URI'),
-            'database' => env('DB_DATABASE', 'Recipe_Roulette'),
+            'database' => 'Recipe_Roulette',
         ],
         'mongodb' => [
             'driver' => 'mongodb',
