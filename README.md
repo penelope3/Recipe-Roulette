@@ -4,5 +4,4 @@ This application includes the same recipe list style as similar products, while 
 This product is created by Soup Group, consisting of Cassandra Harkins and Pooja Patel.
 We are currently in stage: Early Product Design
 
-Current design:
-![prototype home page](https://github.com/penelope3/Recipe-Roulette/blob/master/current_img/prototype-home.PNG)
+see website here: http://recipes-roulette.herokuapp.com
