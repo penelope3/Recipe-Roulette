@@ -15,11 +15,7 @@ return [
     |
     */
 
-    'default' => 'mongodb' => [
-            'driver' => 'mongodb',
-            'dsn' => getenv('MONGODB_URI'),
-            'database' => 'Recipe_Roulette',
-        ],
+    'default' => env('DB_CONNECTION', 'mongodb'),
 
     /*
     |--------------------------------------------------------------------------
