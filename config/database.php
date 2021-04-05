@@ -41,11 +41,11 @@ return [
             'database' => 'Recipe_Roulette',
         ],
 
-        /*'mongodb' => [
+        'mongodb' => [
             'driver' => 'mongodb',
             'dsn' => env('DB_DSN'),
             'database' => env('DB_DATABASE', 'Recipe_Roulette'),
-        ],*/
+        ],
 
         'sqlite' => [
             'driver' => 'sqlite',
