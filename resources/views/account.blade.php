@@ -5,7 +5,7 @@
 @section('content')
     <div class="float-container">
         <div class="main">
-            <span>Register your Recipe Roulette Account here!</span>
+            <span>Enter individual ingredients or allergies that you don't want in your recipes</span>
             {{-- This form will take in a single or multiple restrictions of a user --}}
             <form action="{{ route('account') }}" method="post" class="m-2">
                 @csrf
@@ -15,7 +15,7 @@
                         {{ $message }}
                     </div>
                 @enderror
-                First Name: </br>
+                Ingredient/Allergy: </br>
                 <label for="restriction" class="sr-only">Name</label>
                 <input type="text" name="restriction" id="restriction" placeholder="restriction" class="bg-gray-100 border-2 p-4 rounded-lg @error('name') border-red-500 @enderror">
 

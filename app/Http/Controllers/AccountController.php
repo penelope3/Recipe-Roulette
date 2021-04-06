@@ -26,7 +26,7 @@ class AccountController extends Controller
         //   Remove white space and make uppercase
         $user = Auth::user();
         $restriction = $request->restriction;
-        $restriction = explode(",", $restriction);
+        $restriction = array_map('trim', explode(",", $restriction));
 
         // Check if User Restrictions has been initialized
         //   If so, check if restriction already exists and delete if true
