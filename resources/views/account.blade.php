@@ -1,33 +1,40 @@
 {{-- For Editing Dietary Preferences --}}
 @extends ('app')
 
+
 @section('content')
     <div class="float-container">
         <div class="main">
-            <div class="input">
-                <form>
-                    <form>
-                        <label for="Keyword">Enter any allergies or ingredients, one at a time</label>
-                        <br><br>
-                        <input type="text" id="restriction" maxlength="30">
-                        <input type="submit" value="Submit" id="submitRestriction"/>
-                        <br>
-                    </form>
-                    <div class="chips" id="restrictionChips">
-                      <div class="chip">
-                          Fish <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
-                      </div>
-                      <div class="chip">
-                          Peanuts <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
-                      </div>
+            <span>Register your Recipe Roulette Account here!</span>
+            {{-- This form will take in a single or multiple restrictions of a user --}}
+            <form action="{{ route('account') }}" method="post" class="m-2">
+                @csrf
+
+                @error('restriction')
+                    <div class="text-red-500 mt-2 text-sm">
+                        {{ $message }}
                     </div>
-                    <input type="submit" value="Submit" id="submitRestrictions" class="bg-green-700 hover:bg-green-600 text-white font-bold py-2 px-4 border-b-4 border-green-800 hover:border-green-500 rounded"/>
-                </form>
+                @enderror
+                First Name: </br>
+                <label for="restriction" class="sr-only">Name</label>
+                <input type="text" name="restriction" id="restriction" placeholder="restriction" class="bg-gray-100 border-2 p-4 rounded-lg @error('name') border-red-500 @enderror">
+
+                <input type="submit" class="addRestriction chip" value="Add Restriction"></input>
+            </form>
+            <div class="chips" id="restrictionChips">
+                <p>Your restrictions: Click one to delete it</p>
+                @if(isset(auth()->user()->dietary_restrictions) && !empty(auth()->user()->dietary_restrictions))
+                    @foreach (auth()->user()->dietary_restrictions as $restriction)
+                        <form action="{{ route('accountChips') }}" method="post" class="m-2 chip">
+                            @csrf
+                            <div class="chip">
+                                <input type="submit" class="chip" name="accountChip" value="{{ $restriction }}"></input>
+                            </div>
+                        </form>
+                    @endforeach
+                @else
+                @endif
             </div>
-        </div>
-    </div>
-    <div class="float-container">
-        <div class="Keywords">
         </div>
     </div>
 @endsection

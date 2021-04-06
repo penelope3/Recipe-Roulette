@@ -31,6 +31,8 @@ Route::get('/', function () {
 Route::get('/collections', [CollectionsController::class, 'index'])->name('collections')->middleware(['auth']);
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/account', [AccountController::class, 'index'])->name('account');
+Route::post('/account', [AccountController::class, 'store']);
+Route::post('/account/chips', [AccountController::class, 'delete'])->name('accountChips');
 Route::get('/recipes', [RecipesController::class, 'index'])->name('recipes');
 Route::get('/recipe', [RecipeController::class, 'index'])->name('recipe');
 Route::get('/register', [RegisterController::class, 'index'])->name('register')->middleware(['guest']);
