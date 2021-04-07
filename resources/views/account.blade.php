@@ -5,6 +5,7 @@
 @section('content')
     <div class="float-container">
         <div class="main">
+            <h2><b>Dietary Restrictions</b></h2>
             <span>Enter individual ingredients or allergies that you don't want in your recipes</span>
             {{-- This form will take in a single or multiple restrictions of a user --}}
             <form action="{{ route('account') }}" method="post" class="m-2">
