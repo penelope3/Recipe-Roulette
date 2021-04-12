@@ -116,15 +116,23 @@ footer{
 }
 .chip {
   display: inline-block;
-  padding: 0 15px;
+  padding: 0 5px;
   height: 30px;
-  font-size: 12px;
+  font-size: 20px;
+  line-height: 30px;
+  border-radius: 25px;
+  background-color: #bfc683;
+}
+.inChip {
+  padding: 0 5px;
+  height: 30px;
+  font-size: 20px;
   line-height: 30px;
   border-radius: 25px;
   background-color: #bfc683;
 }
 .closebtn {
-  padding-left: 10px;
+  padding-left: 5px;
   color: #888;
   font-weight: bold;
   float: right;
@@ -133,4 +141,8 @@ footer{
 }
 .closebtn:hover {
   color: #000;
+}
+
+.addRestriction {
+  background-color: #A8A37A;
 }

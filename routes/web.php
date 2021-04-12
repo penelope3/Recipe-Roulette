@@ -31,13 +31,20 @@ Route::get('/', function () {
 Route::get('/collections', [CollectionsController::class, 'index'])->name('collections')->middleware(['auth']);
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/account', [AccountController::class, 'index'])->name('account');
-Route::get('/recipes', [RecipesController::class, 'index'])->name('recipes');
+Route::post('/account', [AccountController::class, 'store']);
+Route::post('/account/chips', [AccountController::class, 'delete'])->name('accountChips');
 Route::get('/recipe', [RecipeController::class, 'index'])->name('recipe');
+Route::get('/recipes', [RecipesController::class, 'index'])->name('recipes');
 Route::get('/register', [RegisterController::class, 'index'])->name('register')->middleware(['guest']);
 Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware(['guest']);
 Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 Route::get('/post', [PostController::class, 'index'])->name('post')->middleware(['auth']);
+Route::post('/post', [PostController::class, 'store']);
+//Route::post('/post/ingredient', [AccountController::class, 'storeIngredient'])->name('ingredient');
+//Route::post('/post/ingredient/chips', [AccountController::class, 'deleteIngredient'])->name('ingredientChips');
+//Route::post('/post/instruction', [AccountController::class, 'storeInstruction'])->name('instruction');
+//Route::post('/post/instruction/chips', [AccountController::class, 'deleteInstruction'])->name('instructionChips');
 Route::get('/search', [SearchController::class, 'index'])->name('search');
 ?>
