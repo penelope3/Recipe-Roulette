@@ -45,7 +45,7 @@ class PostController extends Controller
                 'likes' => 0,
             ]);
         } catch(\Exception $e) {
-            return redirect()->route('post')->with(['error' => "We apologize, but there was an issue posting your recipe. "]);
+            return redirect()->route('post')->with(['error' => "We apologize, but there was an issue posting your recipe."]);
             //return redirect()->route('dashboard')->with(['error' => "We apologize, but there was an issue posting your recipe."]);
         }
 

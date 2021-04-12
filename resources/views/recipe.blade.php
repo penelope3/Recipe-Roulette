@@ -30,15 +30,14 @@
 
 
 
-
             <?php
-                $query = { state: 'OK' };
-                $n = db.Recipe.count(query);
-                $r = Math.floor(Math.random() * n);
-                $randomElement = db.Recipe.find(query).limit(1).skip(r)->_id;
+                //$query = { state: 'OK' };
+                //$n = db.Recipe.count(query);
+                //$r = Math.floor(Math.random() * n);
+                //$randomElement = db.Recipe.find(query).limit(1).skip(r)->_id;
             ?>
             <?php
-                $recipe = raw(function($collection){ return $collection->aggregate([ ['$sample' => ['size' => 5]] ]); })->where('Active','=',true);
+                //$recipe = raw(function($collection){ return $collection->aggregate([ ['$sample' => ['size' => 5]] ]); })->where('Active','=',true);
             ?>
 
 
