@@ -33,6 +33,21 @@ class PostController extends Controller
         $ingredients = array_map('trim', explode("\n", $ingredients));
         $instructions = str_replace("\r","", $request->instruction);
         $instructions = array_map('trim', explode("\n", $instructions));
+        $image = base64_encode(file_get_contents($request->image));
+
+        // temp image storage
+        //$path = $request->image->store('public/images');
+        //$path = basename($path);
+        //$image = new Images();
+        //$image->photo = $path;
+        //$image->save();
+        //Store Image In Folder
+        //$file = $request->get('file');
+        $path = $request->image->store('public/images');
+        $path = substr($path, 7);
+        $path = "storage/" . $path;
+        //$employee->file = $path;
+        //$image = 'data: '.mime_content_type($request->image).';base64,'.$image;
 
         // Create a new Recipe in the DTB and assign the relevant information
         try{
@@ -40,11 +55,12 @@ class PostController extends Controller
                 'title' => $request->title,
                 'ingredients' => $ingredients,
                 'instructions' => $instructions,
-                'image' => $request->image,
+                'image' => $path,
                 'createdBy' => $user->_id,
                 'likes' => 0,
             ]);
         } catch(\Exception $e) {
+            dd($e);
             return redirect()->route('post')->with(['error' => "We apologize, but there was an issue posting your recipe."]);
             //return redirect()->route('dashboard')->with(['error' => "We apologize, but there was an issue posting your recipe."]);
         }

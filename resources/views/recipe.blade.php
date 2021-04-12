@@ -13,35 +13,41 @@
             -->
 
 
+            <?php //$recipe = Recipe::where(['title' => 'a'])->get(); ?>
+            @php
+                use App\Models\Recipe;
+                $recipe = Recipe::all()->random();
+                $image = base64_decode($recipe->image);
+                $image2 = $recipe->image;
+            @endphp
+
             <div>
                 <p>Like//Save</p>
             </div>
             <br>
             <div>
-                <p><b>Title</b></p>
-                <p>Image<p>
+                <p>
+                    <b>{{ $recipe->title }}</b>
+                    <img src={{$image2}}></img>
+                </p>
+
             </div>
             <div>
                 <p>Ingredients</p>
+                @foreach ($recipe->ingredients as $ingredient)
+                    <div class="chip">
+                        <input type="submit" class="Chip" name="accountChip" value="{{ $ingredient }}"></input>
+                    </div>
+                @endforeach
             </div>
             <div>
                 <p>Instructions</p>
+                @foreach ($recipe->instructions as $instruction)
+                    <div class="chip">
+                        <input type="submit" class="inChip" name="accountChip" value="{{ $instruction }}"></input>
+                    </div>
+                @endforeach
             </div>
-
-
-
-            <?php
-                //$query = { state: 'OK' };
-                //$n = db.Recipe.count(query);
-                //$r = Math.floor(Math.random() * n);
-                //$randomElement = db.Recipe.find(query).limit(1).skip(r)->_id;
-            ?>
-            <?php
-                //$recipe = raw(function($collection){ return $collection->aggregate([ ['$sample' => ['size' => 5]] ]); })->where('Active','=',true);
-            ?>
-
-
-
 
 
         </div>

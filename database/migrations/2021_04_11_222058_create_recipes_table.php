@@ -18,9 +18,8 @@ class CreateRecipesTable extends Migration
             $table->string('title');
             $table->array('ingredients');
             $table->array('instructions');
-            $table->file('image');
             $table->string('createdBy');
-            $table->number('likes');            
+            $table->number('likes');
             $table->timestamps();
         });
     }
