@@ -53,9 +53,10 @@
                     <li>
                         <h2><a href="{{ route('post') }}" class="p-3">Post</a></h2>
                     </li>
+                    {{--<!--  COLLECTIONS NOT YET IMPLEMENTED
                     <li>
                         <h2><a href="{{ route('collections') }}" class="p-3">Collections</a></h2>
-                    </li>
+                    </li>-->--}}
                     <li>
                         <h2><a href="{{ route('account') }}" class="p-3">Account</a></h2>
                     </li>

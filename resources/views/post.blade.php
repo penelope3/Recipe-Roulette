@@ -38,29 +38,12 @@
                             </div>
                         @enderror
                         <div>
-                            <!--
-                                <label for="ingredientMeasure" class="sr-only">Ingredient Measurement</label>
-                                <input type="text" name="ingredientMeasure" id="ingredientMeasure" placeholder="1 tsp" class="bg-gray-100 border-2 p-4 rounded-lg @error('ingredientMeasure') border-red-500 @enderror">
-                            -->
                             <label for="ingredient" class="sr-only">Ingredient</label>
                             <textarea name="ingredient" id="ingredient" placeholder="ingredient" class="bg-gray-100 border-2 p-4 rounded-lg @error('ingredient') border-red-500 @enderror"></textarea>
                         </div>
                     </div>
 
                     <div class="chips" id="ingredientChips">
-                        <!--
-                        @if(isset(auth()->user()->recipe) && !empty(auth()->user()->recipe))
-                            <p>Your ingredients: Click one to delete it</p>
-                            @foreach (auth()->user()->recipe as $ingredient)
-                                <form action="{{ route('ingredientChips') }}" method="post" class="m-2 chip">
-                                    @csrf
-                                    <div class="inChip">
-                                        <input type="submit" class="inChip" name="ingredientChip" value="{{ $ingredient }}"></input>
-                                    </div>
-                                </form>
-                            @endforeach
-                        @endif
-                        -->
                     </div>
                 </div>
                 <br>
@@ -80,19 +63,6 @@
                         </div>
                     </div>
                     <div class="chips" id="instructionChips">
-                        <!--
-                        @if(isset(auth()->user()->recipe) && !empty(auth()->user()->recipe))
-                            <p>Your instructions: Click one to delete it</p>
-                            @foreach (auth()->user()->recipe as $instruction)
-                                <form action="{{ route('instructionChips') }}" method="post" class="m-2 chip">
-                                    @csrf
-                                    <div class="inChip">
-                                        <input type="submit" class="inChip" name="instructionChip" value="{{ $instruction }}"></input>
-                                    </div>
-                                </form>
-                            @endforeach
-                        @endif
-                      -->
                     </div>
                 </div>
 

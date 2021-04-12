@@ -35,19 +35,10 @@ class PostController extends Controller
         $instructions = array_map('trim', explode("\n", $instructions));
         $image = base64_encode(file_get_contents($request->image));
 
-        // temp image storage
-        //$path = $request->image->store('public/images');
-        //$path = basename($path);
-        //$image = new Images();
-        //$image->photo = $path;
-        //$image->save();
-        //Store Image In Folder
-        //$file = $request->get('file');
+        // Store image and get path
         $path = $request->image->store('public/images');
         $path = substr($path, 7);
         $path = "storage/" . $path;
-        //$employee->file = $path;
-        //$image = 'data: '.mime_content_type($request->image).';base64,'.$image;
 
         // Create a new Recipe in the DTB and assign the relevant information
         try{
@@ -62,7 +53,6 @@ class PostController extends Controller
         } catch(\Exception $e) {
             dd($e);
             return redirect()->route('post')->with(['error' => "We apologize, but there was an issue posting your recipe."]);
-            //return redirect()->route('dashboard')->with(['error' => "We apologize, but there was an issue posting your recipe."]);
         }
 
         return redirect()->route('recipe');
