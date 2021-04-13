@@ -8,7 +8,6 @@ use App\Http\Controllers\CollectionsController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\SearchController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\RecipesController;
 
@@ -29,7 +28,6 @@ Route::get('/', function () {
 
 
 Route::get('/collections', [CollectionsController::class, 'index'])->name('collections')->middleware(['auth']);
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/account', [AccountController::class, 'index'])->name('account');
 Route::post('/account', [AccountController::class, 'store']);
 Route::post('/account/chips', [AccountController::class, 'delete'])->name('accountChips');
