@@ -35,12 +35,12 @@ return [
 
     'connections' => [
 
-        /*'mongodb' => [
+        'mongodb' => [
             'driver' => 'mongodb',
             'dsn' => getenv('MONGODB_URI'),
             'database' => 'Recipe_Roulette',
         ],
-        */
+        
 
         'mongodb' => [
             'driver' => 'mongodb',
