@@ -40,7 +40,6 @@ return [
             'dsn' => getenv('MONGODB_URI'),
             'database' => 'Recipe_Roulette',
         ],
-        
         /*
         'mongodb' => [
             'driver' => 'mongodb',
