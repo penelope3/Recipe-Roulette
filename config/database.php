@@ -47,7 +47,7 @@ return [
             'database' => env('DB_DATABASE', 'Recipe_Roulette'),
         ],
         */
-        
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),

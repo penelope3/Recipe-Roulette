@@ -27,7 +27,7 @@
                             }
                         }
                     }
-                    
+
                     return false;
                 }
 
@@ -54,10 +54,9 @@
                     $recipe = NULL;
                 }
 
-                if($recipe){
-                    $image = base64_decode($recipe->image);
-                    $image2 = $recipe->image;
-                }
+                //if($recipe){
+                //    $image = $recipe->image;
+                //}
             @endphp
 
             {{--<!--  CODE FOR LIKES AND COLLECTIONS NOT YET IMPLEMENTED
@@ -80,7 +79,9 @@
             <div>
                 <p>
                     <b>{{ $recipe->title }}</b>
-                    <img src={{$image2}}></img>
+                    {{--<!--
+                    <img src="storage/images/aM5JdapIBwqGvV7HlHVXmGY577Utrrg73dO4As3y.png"></img>
+                    -->--}}
                 </p>
 
             </div>

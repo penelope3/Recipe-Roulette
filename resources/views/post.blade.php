@@ -66,7 +66,9 @@
                     </div>
                 </div>
 
+
                 {{-- Image Input --}}
+                {{--<!--  IMAGE NOT CURRENTLY COMPLETE: SHOWS ON LOCAL BUT NOT HEROKUAPP
                 <div>
                     <p>Enter Image for Recipe</p>
                     @error('Image')
@@ -77,6 +79,7 @@
                     <label for="image">Image</label>
                     <input type="file" id="image" name="image" accept="image/*" class="@error('image') border-red-500 @enderror">
                 </div>
+                -->--}}
                 <br>
                 <input type="submit" class="addRestriction chip" value="Post Recipe"></input>
             </form>

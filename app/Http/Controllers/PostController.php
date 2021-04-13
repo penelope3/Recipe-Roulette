@@ -25,7 +25,7 @@ class PostController extends Controller
             'title' => 'required',
             'ingredient' => 'required',
             'instruction' => 'required',
-            'image' => 'required',
+            //'image' => 'required',
         ]);
         $user = Auth::user();
         $title = $request->title;
@@ -33,12 +33,12 @@ class PostController extends Controller
         $ingredients = array_map('trim', explode("\n", $ingredients));
         $instructions = str_replace("\r","", $request->instruction);
         $instructions = array_map('trim', explode("\n", $instructions));
-        $image = base64_encode(file_get_contents($request->image));
+        //$image = base64_encode(file_get_contents($request->image));
 
         // Store image and get path
-        $path = $request->image->store('public/images');
+        //$path = $request->image->store('images');
         //$path = substr($path, 7);
-        $path = "storage/" . $path;
+        //$path = "storage/" . $path;
 
         // Create a new Recipe in the DTB and assign the relevant information
         try{
@@ -46,7 +46,7 @@ class PostController extends Controller
                 'title' => $request->title,
                 'ingredients' => $ingredients,
                 'instructions' => $instructions,
-                'image' => $path,
+                //'image' => $path,
                 'createdBy' => $user->_id,
                 'likes' => 0,
             ]);
@@ -55,7 +55,7 @@ class PostController extends Controller
             return redirect()->route('post')->with(['error' => "We apologize, but there was an issue posting your recipe."]);
         }
 
-        return redirect()->route('recipe');
+        return redirect()->route('home');
     }
 
 
