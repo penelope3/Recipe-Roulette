@@ -12,19 +12,22 @@
                 // Function to search for keywords in recipe
                 function keywordExists($recipe){
                     $user = Auth::user();
-                    $keywords = $user["dietary_restrictions"];
-                    foreach($keywords as $keyword){
-                        foreach($recipe->instructions as $instruction){
-                            if(strpos( mb_strtoupper($instruction),  mb_strtoupper($keyword))){
-                                return true;
-                            }
-                            foreach($recipe->ingredients as $ingredient){
-                                if(strpos( mb_strtoupper($ingredient),  mb_strtoupper($keyword))){
+                    if isset($user["dietary_restrictions"]){
+                        $keywords = $user["dietary_restrictions"];
+                        foreach($keywords as $keyword){
+                            foreach($recipe->instructions as $instruction){
+                                if(strpos( mb_strtoupper($instruction),  mb_strtoupper($keyword))){
                                     return true;
+                                }
+                                foreach($recipe->ingredients as $ingredient){
+                                    if(strpos( mb_strtoupper($ingredient),  mb_strtoupper($keyword))){
+                                        return true;
+                                    }
                                 }
                             }
                         }
                     }
+                    
                     return false;
                 }
 
@@ -54,7 +57,6 @@
                 if($recipe){
                     $image = base64_decode($recipe->image);
                     $image2 = $recipe->image;
-                    dd($image2);
                 }
             @endphp
 
