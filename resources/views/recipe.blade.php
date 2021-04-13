@@ -12,7 +12,7 @@
                 // Function to search for keywords in recipe
                 function keywordExists($recipe){
                     $user = Auth::user();
-                    if isset($user["dietary_restrictions"]){
+                    if(isset($user["dietary_restrictions"])){
                         $keywords = $user["dietary_restrictions"];
                         foreach($keywords as $keyword){
                             foreach($recipe->instructions as $instruction){
