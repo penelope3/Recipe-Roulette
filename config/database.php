@@ -34,19 +34,19 @@ return [
     */
 
     'connections' => [
-
+        /*
         'mongodb' => [
             'driver' => 'mongodb',
             'dsn' => getenv('MONGODB_URI'),
             'database' => 'Recipe_Roulette',
         ],
-        /*
+        */
         'mongodb' => [
             'driver' => 'mongodb',
             'dsn' => env('DB_DSN'),
             'database' => env('DB_DATABASE', 'Recipe_Roulette'),
         ],
-        */
+        
         
         'sqlite' => [
             'driver' => 'sqlite',
