@@ -54,6 +54,7 @@
                 if($recipe){
                     $image = base64_decode($recipe->image);
                     $image2 = $recipe->image;
+                    dd($image2);
                 }
             @endphp
 
