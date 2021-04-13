@@ -32,7 +32,7 @@ class RegisterController extends Controller
             return redirect()->route('register')->with(['error' => "We apologize, but there was an issue registering your account. " .
                 /**** COMMENTED OUT BECAUSE DASHBOARD ISSUES ***/ 
                 //"Please try again or try submitting a ticket on the <a href=" . route('dashboard') . " style='color: blue;'>support page!</a>
-                "]);
+                ]);
         }
 
         return redirect()->route('collections');
