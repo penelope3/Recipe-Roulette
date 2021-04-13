@@ -29,12 +29,12 @@ class RegisterController extends Controller
             ]);
         } catch(\Exception $e) {
             $user->delete();
-            return redirect()->route('register')->with(['error' => "We apologize, but there was an issue registering your account. "
+            return redirect()->route('home')->with(['error' => "We apologize, but there was an issue registering your account. "
                 /**** COMMENTED OUT BECAUSE DASHBOARD ISSUES ***/ 
-                //"Please try again or try submitting a ticket on the <a href=" . route('dashboard') . " style='color: blue;'>support page!</a>
+                //"Please try again or try submitting a ticket on the <a href=" . route('home') . " style='color: blue;'>support page!</a>
                 ]);
         }
 
-        return redirect()->route('collections');
+        return redirect()->route('home');
     }
 }
