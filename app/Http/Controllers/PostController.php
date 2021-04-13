@@ -37,7 +37,7 @@ class PostController extends Controller
 
         // Store image and get path
         $path = $request->image->store('public/images');
-        $path = substr($path, 7);
+        //$path = substr($path, 7);
         $path = "storage/" . $path;
 
         // Create a new Recipe in the DTB and assign the relevant information

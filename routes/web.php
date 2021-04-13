@@ -12,10 +12,6 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\RecipesController;
 
-Route::get('/linkstorage', function () {
-    Artisan::call('storage:link'); // this will do the command line job
-});
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
