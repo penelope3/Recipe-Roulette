@@ -90,19 +90,21 @@
 
             </div>
             <div>
-                <p>Ingredients</p>
+                <b><p>Ingredients</p></b>
                 @foreach ($recipe->ingredients as $ingredient)
                     <div class="chip">
-                        <input type="submit" class="Chip" name="ingredientChip" value="{{ $ingredient }}"></input>
+                        <input type="submit" class="chip" name="ingredientChip" value="{{ $ingredient }}"></input>
                     </div>
                 @endforeach
             </div>
+            <br>
             <div>
-                <p>Instructions</p>
+                <b><p>Instructions</p></b>
                 @foreach ($recipe->instructions as $instruction)
-                    <div class="chip">
+                    <div class="inChip">
                         <input type="submit" class="inChip" name="instructionChip" value="{{ $instruction }}"></input>
                     </div>
+                </br>
                 @endforeach
             </div>
             @endif

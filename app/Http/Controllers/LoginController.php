@@ -17,7 +17,7 @@ class LoginController extends Controller
     //this function will attempt to login based on user inputs
     //failed login will redirect back with an error message
     public function store(Request $request){
-        if(!auth()->attempt($request->only('email', 'password'))){
+        if(!auth()->attempt($request->only('email', 'password'), $request->remember)){
             return redirect()->back()->with('status', 'Invalid Login Attempt');
         }
     return redirect()->route('home');

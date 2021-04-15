@@ -14,7 +14,7 @@
     margin-bottom: -60px;
 }
 body{
-    background-image: linear-gradient(#C97064, #F6D188) !important;
+    background-image: linear-gradient(#af685f, #e2c385) !important;
     background-size: cover !important;
     background-repeat: no-repeat;
     background: #f5e1cf;
@@ -23,7 +23,7 @@ body{
     line-height: 30px;
 }
 nav {
-    background: #ECBD93 !important;
+    background: #f4bf90 !important;
     margin:0px auto;
     width:50%;
     min-width: 550px;
@@ -43,7 +43,7 @@ footer{
 }
 .top-bar{
     font-size: 20px;
-    background: #A8A37A !important;
+    background: #ada877 !important;
     margin:0px auto;
     width:50%;
     min-width: 550px;
@@ -138,6 +138,8 @@ footer{
   background-color: #bfc683;
 }
 .inChip {
+  display: inline-block;
+  margin-bottom: 5px;
   padding: 0 5px;
   height: 30px;
   font-size: 20px;
