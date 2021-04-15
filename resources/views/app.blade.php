@@ -47,9 +47,6 @@
                 <li>
                     <h2><a href="{{ route('home') }}" class="p-3">Home</a></h2>
                 </li>
-            </ul>
-
-            <ul class="flex items-center">
                 @auth
                     <li>
                         <h2><a href="{{ route('post') }}" class="p-3">Post</a></h2>
@@ -59,8 +56,13 @@
                         <h2><a href="{{ route('collections') }}" class="p-3">Collections</a></h2>
                     </li>-->--}}
                     <li>
-                        <h2><a href="{{ route('account') }}" class="p-3">Account</a></h2>
+                        <h2><a href="{{ route('account') }}" class="p-3">Restrictions</a></h2>
                     </li>
+                @endauth
+            </ul>
+
+            <ul class="flex items-center">
+                @auth
                     <li>
                         <form action="{{ route('logout') }}" method="post" class="p-3 inline">
                             @csrf
@@ -83,6 +85,6 @@
         @yield('content')
     </body>
     <footer>
-        © 2021 Soup Group | Logo created at LogoMakr.com
+        © 2021 Soup Group
     </footer>
 </html>
