@@ -23,7 +23,7 @@
             @endauth
             </li>
         </ul>
-
+        {{-- commenting out the Search bar for now
         <ul class="flex items-center">
             <div class="pt-2 relative mx-auto text-gray-600">
                 <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
@@ -39,6 +39,7 @@
                 </a>
             </div>
         </ul>
+        --}}
     </nav>
     <body class="bg-gray-200">
         <nav class="p-6 flex justify-between mb-6">
