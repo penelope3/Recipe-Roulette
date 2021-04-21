@@ -9,9 +9,9 @@
                 @csrf
 
                 <div class="mb-4">
-                    First Name: </br>
-                    <label for="name" class="sr-only">Name</label>
-                    <input type="text" name="name" id="name" placeholder="First Name" class="bg-gray-100 border-2 p-4 rounded-lg @error('name') border-red-500 @enderror" value="{{ old('name') }}">
+                    Username: </br>
+                    <label for="name" class="sr-only">Username</label>
+                    <input type="text" name="name" id="name" placeholder="Username" class="bg-gray-100 border-2 p-4 rounded-lg @error('name') border-red-500 @enderror" value="{{ old('name') }}">
                 </div>
 
                 @error('name')

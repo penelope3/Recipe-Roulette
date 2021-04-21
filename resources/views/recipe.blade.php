@@ -4,6 +4,9 @@
 @section('content')
     <div class="float-container">
         <div class="main">
+            <span class="right-adjust">
+                <a href="{{ route('recipe') }}" type="button" class="bg-green-700 hover:bg-green-600 text-white font-bold py-2 px-4 border-b-4 border-green-800 hover:border-green-500 rounded" id="random-btn"> Generate a New Recipe</a>
+            </span>
 
             {{--Get a random Recipe and Show it--}}
             @php
@@ -78,7 +81,8 @@
             @else
             <div>
                 <p>
-                    <b>{{ $recipe->title }}</b>
+                    <span class="recipe-title"><b>{{ $recipe->title }}</b></span>
+                </br>
                     {{--<!--
                     <img src="storage/images/aM5JdapIBwqGvV7HlHVXmGY577Utrrg73dO4As3y.png"></img>
                     -->--}}
@@ -86,19 +90,21 @@
 
             </div>
             <div>
-                <p>Ingredients</p>
+                <b><p>Ingredients</p></b>
                 @foreach ($recipe->ingredients as $ingredient)
                     <div class="chip">
-                        <input type="submit" class="Chip" name="ingredientChip" value="{{ $ingredient }}"></input>
+                        <input type="submit" class="chip" name="ingredientChip" value="{{ $ingredient }}"></input>
                     </div>
                 @endforeach
             </div>
+            <br>
             <div>
-                <p>Instructions</p>
+                <b><p>Instructions</p></b>
                 @foreach ($recipe->instructions as $instruction)
-                    <div class="chip">
+                    <div class="inChip">
                         <input type="submit" class="inChip" name="instructionChip" value="{{ $instruction }}"></input>
                     </div>
+                </br>
                 @endforeach
             </div>
             @endif

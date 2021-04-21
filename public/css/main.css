@@ -7,23 +7,23 @@
     text-align: center;
     display: flex;
     width: 40%;
+    min-width: 400px;
     height: auto;
     margin:0px auto;
     margin-top: 50px;
     margin-bottom: -60px;
 }
 body{
-    background-image: linear-gradient(#C97064, #F6D188) !important;
+    background-image: linear-gradient(#af685f, #e2c385) !important;
     background-size: cover !important;
     background-repeat: no-repeat;
-    height: 100%;
     background: #f5e1cf;
-    color: #48362f;
+    color: #0a4736;
     font-size: 18px;
     line-height: 30px;
 }
 nav {
-    background: #ECBD93 !important;
+    background: #f4bf90 !important;
     margin:0px auto;
     width:50%;
     min-width: 550px;
@@ -43,7 +43,7 @@ footer{
 }
 .top-bar{
     font-size: 20px;
-    background: #A8A37A !important;
+    background: #ada877 !important;
     margin:0px auto;
     width:50%;
     min-width: 550px;
@@ -86,6 +86,20 @@ footer{
 
 
 /*****************
+/* Recipe Page formatting
+******************/
+.right-adjust{
+  display: flex;
+  justify-content: right;
+}
+.recipe-title{
+  display: block;
+  font-size: 40px;
+  padding-bottom: 30px;
+}
+
+
+/*****************
 /* Post Page formatting
 ******************/
 #ImageSubmit {
@@ -124,6 +138,8 @@ footer{
   background-color: #bfc683;
 }
 .inChip {
+  display: inline-block;
+  margin-bottom: 5px;
   padding: 0 5px;
   height: 30px;
   font-size: 20px;
