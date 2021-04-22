@@ -29,7 +29,7 @@
                         <form action="{{ route('accountChips') }}" method="post" class="m-2 chip">
                             @csrf
                             <div class="chip">
-                                <input type="submit" class="chip" name="accountChip" value="{{ $restriction }}"></input>
+                                <div>{{ $restriction }}<input type="submit" class="chip" name="{{ $restriction }}" value="&#x2715"></input></div>
                             </div>
                         </form>
                     @endforeach

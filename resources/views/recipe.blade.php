@@ -18,19 +18,24 @@
                     if(isset($user["dietary_restrictions"])){
                         $keywords = $user["dietary_restrictions"];
                         foreach($keywords as $keyword){
+                            //Plural error check (not great, so excluding)
+                            //if( (mb_strtoupper(substr($keyword, -1)) == 'S') && (strlen($keyword) > 1) ){
+                            //    $keyword = substr($keyword, 0, -1);
+                            //}
                             foreach($recipe->instructions as $instruction){
-                                if(strpos( mb_strtoupper($instruction),  mb_strtoupper($keyword))){
+                                $temp = strpos( mb_strtoupper($instruction),  mb_strtoupper($keyword));
+                                if($temp || $temp === 0){
                                     return true;
                                 }
-                                foreach($recipe->ingredients as $ingredient){
-                                    if(strpos( mb_strtoupper($ingredient),  mb_strtoupper($keyword))){
-                                        return true;
-                                    }
+                            }
+                            foreach($recipe->ingredients as $ingredient){
+                                $temp = strpos( mb_strtoupper($ingredient),  mb_strtoupper($keyword));
+                                if($temp || $temp === 0){
+                                    return true;
                                 }
                             }
                         }
                     }
-
                     return false;
                 }
 
