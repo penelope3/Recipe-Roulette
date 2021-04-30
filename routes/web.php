@@ -28,7 +28,7 @@ Route::get('/', function () {
 
 
 Route::get('/collections', [CollectionsController::class, 'index'])->name('collections')->middleware(['auth']);
-Route::get('/account', [AccountController::class, 'index'])->name('account');
+Route::get('/account', [AccountController::class, 'index'])->name('account')->middleware(['auth']);
 Route::post('/account', [AccountController::class, 'store']);
 Route::post('/account/chips', [AccountController::class, 'delete'])->name('accountChips');
 Route::get('/recipe', [RecipeController::class, 'index'])->name('recipe');

@@ -40,7 +40,10 @@
                 }
 
                 //Get all recipes and store in varaiable
+
+                $recipe = NULL;
                 $allRecipes = Recipe::all();
+                
                 while(!empty($allRecipes[0])){
                     // Get recipe and check that it doesn't have any restrictons
                     $recipe = $allRecipes->random();

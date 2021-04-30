@@ -8,8 +8,8 @@
         </br>
         </br>
 
-            <p>Welcome to Recipe Roulette! Our site features the button above, which will retrieve a random recipe for you to try. Use the search bar if you already know what you want to make. Register with us in order to access our full site, including a place to save all your recipes, as well as post recipes for others to enjoy!</p>
-    
+            <p>Welcome to Recipe Roulette! Our site features the button above, which will retrieve a random recipe for you to try. Register with us in order to access our full site, including access to post recipes for others to enjoy!</p>
+
         </div>
     </div>
 
