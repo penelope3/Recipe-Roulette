@@ -30,9 +30,9 @@ class PostController extends Controller
         $user = Auth::user();
         $title = $request->title;
         $ingredients = str_replace("\r", "", $request->ingredient);
-        $ingredients = array_map('trim', explode("\n", $ingredients));
+        $ingredients = array_filter( array_map('trim', explode("\n", $ingredients)) );
         $instructions = str_replace("\r","", $request->instruction);
-        $instructions = array_map('trim', explode("\n", $instructions));
+        $instructions = array_filter( array_map('trim', explode("\n", $instructions)) );
         //$image = base64_encode(file_get_contents($request->image));
 
         // Store image and get path

@@ -36,7 +36,9 @@ class AccountController extends Controller
             foreach($restriction as $input) {
               if(mb_strtoupper($input) == mb_strtoupper($value)) {
                 $index = array_search($input, $restriction);
-                unset($restriction[$index]);
+                if($index || $index === 0){
+                  unset($restriction[$index]);
+                }
               }
             }
           }
@@ -59,13 +61,16 @@ class AccountController extends Controller
     public function delete(Request $request){
         $user = Auth::user();
         $temp = $request->all();
-        $deletion = $temp["accountChip"];
+        $deletion = array_search('✕', $temp);
         // Check if User Restrictions has been initialized
         //   If so, check if restriction already exists and delete if true
         if(isset($user["dietary_restrictions"]) && !empty($user["dietary_restrictions"])) {
           $restrictions = $user["dietary_restrictions"];
           $index = array_search($deletion, $restrictions);
-          unset($restrictions[$index]);
+          $temp = array($deletion, $restrictions);
+          if($index || $index === 0){
+            unset($restrictions[$index]);
+          }
         }
         $user["dietary_restrictions"] = $restrictions;
 
