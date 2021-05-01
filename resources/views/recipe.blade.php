@@ -43,7 +43,7 @@
 
                 $recipe = NULL;
                 $allRecipes = Recipe::all();
-                
+
                 while(!empty($allRecipes[0])){
                     // Get recipe and check that it doesn't have any restrictons
                     $recipe = $allRecipes->random();
@@ -101,7 +101,7 @@
                 <b><p>Ingredients</p></b>
                 @foreach ($recipe->ingredients as $ingredient)
                     <div class="chip">
-                        <input type="submit" class="chip" name="ingredientChip" value="{{ $ingredient }}"></input>
+                        <input type="submit" class="chip bg-green-600 text-white" name="ingredientChip" value="{{ $ingredient }}"></input>
                     </div>
                 @endforeach
             </div>
@@ -110,7 +110,7 @@
                 <b><p>Instructions</p></b>
                 @foreach ($recipe->instructions as $instruction)
                     <div class="inChip">
-                        <input type="submit" class="inChip" name="instructionChip" value="{{ $instruction }}"></input>
+                        <input type="submit" class="inChip bg-green-600 text-white" name="instructionChip" value="{{ $instruction }}"></input>
                     </div>
                 </br>
                 @endforeach

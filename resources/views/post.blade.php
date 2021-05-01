@@ -43,7 +43,7 @@
                         </div>
                     </div>
 
-                    <div class="chips" id="ingredientChips">
+                    <div class="chips bg-green-500 hover:bg-green-600 text-white font-bold" id="ingredientChips">
                     </div>
                 </div>
                 <br>
@@ -62,7 +62,7 @@
                             <textarea name="instruction" id="instruction" placeholder="Pour water into a bowl" class="bg-gray-100 border-2 p-4 rounded-lg @error('instruction') border-red-500 @enderror"></textarea>
                         </div>
                     </div>
-                    <div class="chips" id="instructionChips">
+                    <div class="chips bg-green-500 hover:bg-green-600 text-white font-bold" id="instructionChips">
                     </div>
                 </div>
 
@@ -81,7 +81,7 @@
                 </div>
                 -->--}}
                 <br>
-                <input type="submit" class="addRestriction chip" value="Post Recipe"></input>
+                <input type="submit" id="submit" class="chip bg-green-700 hover:bg-green-600 text-white font-bold" value="Post Recipe"></input>
             </form>
         </div>
     </div>

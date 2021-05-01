@@ -16,21 +16,21 @@ class RegisterController extends Controller
     //on error it will redirect and throw an alert message
     public function store(Request $request){
         $request->validate([
-            'name' => 'required|max:255',
-            'email' => 'required|max:255|unique:users',
-            'password' => 'required|confirmed|max:255',
+            'username' => 'required|min:3|max:65',
+            'email' => 'required|max:255|unique:users|email:rfc,dns',
+            'password' => 'required|confirmed|min:8|max:65',
         ]);
 
         try{
             $user = User::create([
-                'name' => $request->name,
+                'username' => $request->username,
                 'email' => $request->email,
                 'password' => \Hash::make($request->password),
             ]);
         } catch(\Exception $e) {
             $user->delete();
             return redirect()->back()->with(['error' => "We apologize, but there was an issue registering your account. "
-                /**** COMMENTED OUT BECAUSE DASHBOARD ISSUES ***/ 
+                /**** COMMENTED OUT BECAUSE DASHBOARD ISSUES ***/
                 //"Please try again or try submitting a ticket on the <a href=" . route('home') . " style='color: blue;'>support page!</a>
                 ]);
         }

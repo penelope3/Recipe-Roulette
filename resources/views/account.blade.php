@@ -20,16 +20,16 @@
                 <label for="restriction" class="sr-only">Name</label>
                 <input type="text" name="restriction" id="restriction" placeholder="restriction" class="bg-gray-100 border-2 p-4 rounded-lg @error('name') border-red-500 @enderror">
 
-                <input type="submit" class="addRestriction chip" value="Add Restriction"></input>
+                <input type="submit" class="chip  bg-green-700 hover:bg-green-600 text-white font-bold" value="Add Restriction"></input>
             </form>
             <div class="chips" id="restrictionChips">
-                <p>Your restrictions: Click one to delete it</p>
+                <p>Your restrictions: Click the &#x2715 to delete </p>
                 @if(isset(auth()->user()->dietary_restrictions) && !empty(auth()->user()->dietary_restrictions))
                     @foreach (auth()->user()->dietary_restrictions as $restriction)
                         <form action="{{ route('accountChips') }}" method="post" class="m-2 chip">
                             @csrf
-                            <div class="chip">
-                                <div>{{ $restriction }}<input type="submit" class="chip" name="{{ $restriction }}" value="&#x2715"></input></div>
+                            <div class="chip bg-green-600 text-white">
+                                <div>{{ $restriction }}   <input type="submit" class="chip bg-green-700 hover:bg-green-300 font-bold" name="{{ $restriction }}" value="&#x2715"></input></div>
                             </div>
                         </form>
                     @endforeach
