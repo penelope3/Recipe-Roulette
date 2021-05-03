@@ -17,6 +17,7 @@ body{
     background-image: linear-gradient(#af685f, #e2c385) !important;
     background-size: cover !important;
     background-repeat: no-repeat;
+    height: 100%;
     background: #f5e1cf;
     color: #0a4736;
     font-size: 18px;
